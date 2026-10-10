@@ -11,6 +11,13 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Didier DIUR | Physiologie et pathologie">
 <meta property="og:description" content="Fiches de révision en physiologie et pathologie, par Didier DIUR.">
+<meta property="og:url" content="https://infirmiersarobase.github.io/didier-diur/">
+<meta property="og:image" content="https://infirmiersarobase.github.io/didier-diur/apercu.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Un cœur rouge avec un tracé d'électrocardiogramme : Didier DIUR, physiologie et pathologie">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://infirmiersarobase.github.io/didier-diur/apercu.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -117,6 +124,16 @@ details[open] summary{border-bottom:1px solid var(--line)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .reset{color:#13263A}}
 
 footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line);margin-top:2.5rem}
+
+/* chapter tiles */
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin:1.2rem 0 0}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;padding:1rem;background:var(--card);border:1.5px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink);min-height:11rem}
+.tile:hover{border-color:var(--blood)}
+.tile svg{width:3.4rem;height:3.4rem;fill:none;stroke:var(--teal);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tile.heart svg{stroke:var(--blood);fill:var(--blood-soft)}
+.tile b{font-family:var(--head);font-size:1.1rem;line-height:1.2}
+.tile span{color:var(--muted);font-size:.93rem;line-height:1.35}
+@media (min-width:36rem){.tiles{grid-template-columns:repeat(4,1fr)}}
 </style>
 </head>
 <body>
@@ -135,12 +152,38 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px so
     <a href="#hormones">Hormones</a>
     <a href="#poumon">Poumon</a>
     <a href="#coeur">Cœur</a>
+    <a href="#digestif">Digestif</a>
     <a href="#eau">Trajet de l'eau</a>
     <a href="#quiz">Quiz</a>
   </div>
 </nav>
 
 <main>
+
+<section id="accueil">
+  <div class="wrap">
+    <h2>Choisis un chapitre</h2>
+    <p class="lead">Touche une vignette pour aller directement aux fiches.</p>
+    <div class="tiles">
+      <a class="tile" href="#hormones">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 24c0-9 7-16 16-16s16 7 16 16c0 5-3 8-7 8H15c-4 0-7-3-7-8z"/><path d="M24 32v6"/><circle cx="24" cy="41" r="2.6"/><path d="M19 20c2 2 4 2 5 0s3-2 5 0"/></svg>
+        <b>Hypothalamus</b><span>Les hormones, de la commande au sang</span>
+      </a>
+      <a class="tile" href="#poumon">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v14"/><path d="M24 20c-3 0-5 2-6 4M24 20c3 0 5 2 6 4"/><path d="M18 24c-5 1-9 8-9 15 0 3 2 4 4 4 3 0 5-2 5-5z"/><path d="M30 24c5 1 9 8 9 15 0 3-2 4-4 4-3 0-5-2-5-5z"/></svg>
+        <b>Poumon</b><span>Asthme, BPCO, pneumonie, tuberculose</span>
+      </a>
+      <a class="tile heart" href="#coeur">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 41C10 32 5 25 5 18c0-5 4-9 9-9 4 0 7 2 10 6 3-4 6-6 10-6 5 0 9 4 9 9 0 7-5 14-19 23z"/><path d="M10 24h8l3-6 4 11 3-5h10" stroke-width="1.8"/></svg>
+        <b>Cœur</b><span>Infarctus, hypertension, insuffisance cardiaque</span>
+      </a>
+      <a class="tile" href="#digestif">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M20 6v10c0 4 3 6 6 7 6 1 11 4 11 10 0 5-4 8-9 8-4 0-6-2-6-5"/><path d="M26 6v8"/><path d="M14 38c-3 0-5-2-5-5s2-5 5-5h6"/></svg>
+        <b>Appareil digestif</b><span>Reflux, ulcère, gastro-entérite</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <section id="hormones">
   <div class="wrap">
@@ -366,6 +409,89 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px so
   </div>
 </section>
 
+<section id="digestif">
+  <div class="wrap">
+    <h2>L'appareil digestif</h2>
+    <p class="lead">Du repas jusqu'aux selles : où chaque étape se passe, puis trois pathologies à connaître.</p>
+
+    <ol class="steps">
+      <li><div><b>Bouche.</b> Les dents broient les aliments. La salive contient l'amylase, qui commence à digérer l'amidon.</div></li>
+      <li><div><b>Œsophage.</b> Il pousse les aliments vers l'estomac par des contractions.</div></li>
+      <li><div><b>Estomac.</b> L'acide chlorhydrique et la pepsine commencent la digestion des protéines.</div></li>
+      <li><div><b>Intestin grêle.</b> La bile et le suc pancréatique terminent la digestion. Les villosités absorbent les nutriments.</div></li>
+      <li><div><b>Gros intestin.</b> Il récupère l'eau restante et forme les selles, éliminées par le rectum.</div></li>
+    </ol>
+
+    <details>
+      <summary>Reflux gastro-œsophagien (RGO)</summary>
+      <div class="body">
+        <h3>Ce que c'est</h3>
+        <p>Remontée du contenu acide de l'estomac dans l'œsophage. Brûlures qui montent derrière le sternum, régurgitations acides, surtout après les repas ou en position allongée.</p>
+        <h3>Traitements</h3>
+        <ul>
+          <li>Conseils : repas moins copieux, éviter de s'allonger juste après manger, surélever la tête du lit, perdre du poids si besoin.</li>
+          <li>Pansements gastriques et antiacides pour soulager.</li>
+          <li>Inhibiteurs de la pompe à protons (IPP, par exemple l'oméprazole) en cas de reflux fréquent.</li>
+        </ul>
+        <div class="ci">
+          <h3>Précautions</h3>
+          <ul>
+            <li>Difficulté à avaler, amaigrissement, vomissements de sang ou selles noires : consulter, un examen est nécessaire.</li>
+            <li>IPP pris longtemps : à réévaluer régulièrement avec le médecin.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Ulcère gastroduodénal</summary>
+      <div class="body">
+        <h3>Ce que c'est</h3>
+        <p>Plaie de la muqueuse de l'estomac ou du duodénum. Les deux causes principales sont la bactérie <i>Helicobacter pylori</i> et les anti-inflammatoires (AINS, aspirine). Douleur au creux de l'estomac, parfois soulagée ou aggravée par les repas.</p>
+        <h3>Traitements</h3>
+        <ul>
+          <li>IPP pour cicatriser l'ulcère.</li>
+          <li>Si <i>H. pylori</i> est présent : IPP associé à plusieurs antibiotiques pour éradiquer la bactérie.</li>
+          <li>Arrêter ou éviter les AINS.</li>
+        </ul>
+        <div class="ci">
+          <h3>Précautions et contre-indications</h3>
+          <ul>
+            <li>Allergie aux pénicillines : le choix des antibiotiques change.</li>
+            <li>AINS : à éviter en cas d'ulcère connu.</li>
+            <li>Saignement digestif (vomissements de sang, selles noires) : urgence.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Gastro-entérite aiguë</summary>
+      <div class="body">
+        <h3>Ce que c'est</h3>
+        <p>Infection de l'intestin, le plus souvent virale. Diarrhée, vomissements, parfois fièvre. Le risque principal est la <b>déshydratation</b>, surtout chez le nourrisson et la personne âgée.</p>
+        <h3>Traitements</h3>
+        <ul>
+          <li>Réhydratation avec une solution de réhydratation orale, à boire par petites gorgées.</li>
+          <li>Reprendre une alimentation normale dès que possible.</li>
+          <li>Lavage des mains pour éviter de contaminer les autres.</li>
+        </ul>
+        <div class="ci">
+          <h3>Précautions et contre-indications</h3>
+          <ul>
+            <li>Les antidiarrhéiques sont déconseillés en cas de fièvre ou de selles sanglantes, et contre-indiqués chez le jeune enfant.</li>
+            <li>Signes de déshydratation, très jeune enfant ou personne fragile : consulter rapidement.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <div class="note warn">
+      Ces fiches servent à réviser. Pour les doses et les décisions de soin, appuie-toi sur ton cours et sur les référentiels officiels.
+    </div>
+  </div>
+</section>
+
 <section id="eau">
   <div class="wrap">
     <h2>Le trajet de l'eau</h2>
@@ -390,7 +516,7 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px so
 <section id="quiz">
   <div class="wrap">
     <h2>Quiz de révision</h2>
-    <p class="lead">Sept questions. Touche une réponse pour la vérifier.</p>
+    <p class="lead">Huit questions. Touche une réponse pour la vérifier.</p>
     <div id="quizbox"></div>
     <div class="score" id="score" aria-live="polite"></div>
     <button class="reset" id="reset" hidden>Recommencer</button>
@@ -411,6 +537,7 @@ var QUESTIONS=[
   {q:"Quelle structure de l'intestin grêle augmente la surface d'absorption ?",o:["Les alvéoles","Les villosités","Les néphrons"],a:1,e:"Les villosités ont la forme de petits doigts et contiennent des vaisseaux sanguins."},
   {q:"Quel est l'ordre correct après l'absorption de l'eau ?",o:["Sang, rein, vessie, urètre","Sang, vessie, rein, urètre","Rein, sang, urètre, vessie"],a:0,e:"Le sang passe par le rein, l'urine descend dans les uretères, la vessie, puis sort par l'urètre."},
   {q:"Quelle cavité du cœur propulse le sang oxygéné dans l'aorte ?",o:["L'oreillette droite","Le ventricule gauche","Le ventricule droit"],a:1,e:"Le ventricule gauche est le plus musclé : il envoie le sang vers tout le corps."},
+  {q:"Quelles sont les deux causes principales de l'ulcère gastroduodénal ?",o:["Helicobacter pylori et les AINS","Le tabac et la tuberculose","L'asthme et la BPCO"],a:0,e:"La bactérie Helicobacter pylori et les anti-inflammatoires abîment la muqueuse de l'estomac."},
   {q:"Quel est le danger principal de la fibrillation atriale ?",o:["L'AVC causé par des caillots","L'asthme","Le diabète insipide"],a:0,e:"Les caillots formés dans les oreillettes peuvent migrer vers le cerveau, d'où le traitement anticoagulant."}
 ];
 var box=document.getElementById('quizbox'),scoreEl=document.getElementById('score'),resetBtn=document.getElementById('reset');
